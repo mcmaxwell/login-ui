@@ -1,0 +1,22 @@
+.separator-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-grey);
+  font-size: .8rem;
+  line-height: 1.33;
+}
+
+.separator-line {
+  height: 1px;
+  background-color: var( --color-light-grey);
+  flex: 1;
+}
+
+.separator-text {
+    margin: 0 5px;
+}

@@ -1,0 +1,311 @@
+:root {
+  --color-primary    : #316FEA;
+  --color-brand-grey : #D3D8DC;
+  --color-light-grey : #E3E6E9;
+  --color-grey       : #BEC5CC;
+  --color-brand-dark : #1A1919;
+  --color-brand-white: #FFFFFF;
+
+  --color-border-color: var(--color-grey);
+
+  --font-family-primary: 'Basis grotesque pro', sans-serif;
+
+  --font-size-base: 15px;
+
+  --font-size-body: 1rem;
+  /* 15px */
+  --font-size-h1  : 2rem;
+  /* 30px */
+
+  --font-size-medium: 1.0666rem;
+  /* 16px */
+  --font-size-small : .93333rem;
+  /* 14px */
+
+  --base-border-radius: 6px;
+
+  --input-padding : 14px 12px;
+  --button-padding: 13px;
+
+  --input-border: 1.2px solid var(--color-border-color);
+
+  --delay: .3s;
+
+  --max-width-form: 400px;
+
+  font-synthesis         : none;
+  text-rendering         : optimizeLegibility;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:hover {
+  transition: all var(--delay) ease;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height    : 100vh;
+  text-rendering: optimizeSpeed;
+  line-height   : 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display  : block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration       : 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration      : 0.01ms !important;
+    scroll-behavior          : auto !important;
+  }
+}
+
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Basis grotesque pro';
+  src        : url('./assets/fonts/basisgrotesquepro-bold.woff2') format('woff2'),
+    url('basisgrotesquepro-bold.woff') format('woff');
+  font-weight: 700;
+  font-style : normal;
+}
+
+@font-face {
+  font-family: 'Basis grotesque pro';
+  src        : url('./assets/fonts/basisgrotesquepro-medium.woff2') format('woff2'),
+    url('basisgrotesquepro-medium.woff') format('woff');
+  font-weight: 500;
+  font-style : normal;
+}
+
+@font-face {
+  font-family: 'Basis grotesque pro';
+  src        : url('./assets/fonts/basisgrotesquepro-regular.woff2') format('woff2'),
+    url('basisgrotesquepro-regular.woff') format('woff');
+  font-weight: normal;
+  font-style : normal;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size  : var(--font-size-body);
+  color      : var(--color-brand-dark);
+  line-height: 1.42;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: 1.3;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding      : var(--input-padding);
+  border       : var(--input-border);
+  border-radius: var(--base-border-radius);
+  line-height: 1.33;
+}
+
+a {
+  color          : var(--color-primary);
+  text-decoration: none;
+  font-weight    : 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding         : var(--button-padding);
+  background-color: var(--color-brand-white);
+  border          : var(--input-border);
+  color           : var(--color-brand-dark);
+  font-size       : var(--font-size-medium);
+  border-radius   : var(--base-border-radius);
+  font-weight     : 500;
+  cursor          : pointer;
+}
+
+button:hover {
+  background-color: var(--color-grey);
+}
+
+.button {
+  width: 100%;
+}
+
+button.primary {
+  padding         : var(--input-padding);
+  border          : none;
+  background-color: var(--color-primary);
+  color           : var(--color-brand-white);
+}
+
+button.primary:hover {
+  background-color: var(--color-brand-dark);
+}
+
+/* pages */
+
+.main {
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  justify-content: center;
+  min-height     : 100vh;
+}
+
+.app-logo {
+  margin: 0 auto 80px;
+}
+
+.main-title {
+  margin-bottom: 40px;
+}
+
+.ui-login-container {
+  width     : 100%;
+  max-width : var(--max-width-form);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width   : 1px;
+  height  : 1px;
+  margin  : -1px;
+  padding : 0;
+  overflow: hidden;
+  clip    : rect(0, 0, 0, 0);
+  border  : 0;
+}
+
+.input-password input,
+.input-email input {
+  width: 100%;
+}
+
+.input-email {
+  margin-bottom: 25px;
+}
+
+.input-password {
+  position     : relative;
+  margin-bottom: 15px;
+}
+
+.password-visibility-toggle {
+  background: none;
+  border    : none;
+  padding   : 0;
+  position  : absolute;
+  right     : 15px;
+  top       : 16px;
+}
+
+.forgot-password-wrapper {
+  text-align   : right;
+  font-size    : var(--font-size-small);
+  font-weight  : 500;
+  margin-bottom: 30px;
+}
+
+.forgot-password {
+  font-size : var(--font-size-small);
+  font-weight : 500;
+}
+
+.submit-button {
+  width        : 100%;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+}
+
+input.error {
+  border-color: red;
+  color       : red;
+}
+
+.label {
+  text-align   : left;
+  font-weight  : 500;
+  margin-bottom: 8px;
+  display      : block;
+}
+
+.password-field-wrapper {
+  position: relative;
+}
